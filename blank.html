@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Answer</title>
+    <!-- tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <h1 class="text-center text-5xl font-bold mt-10">This is the Question Answer Page</h1>
+
+    <section class="w-11/12 mx-auto mt-8">
+        <h2 class="text-3xl font-semibold  my-3">Discuss the scope of var, let, and const </h2>
+        <li>The var keyword was the original way to declare variables in JavaScript. Variables declared with var have
+            function scope. This means that they can be accessed from anywhere within the function where they are
+            declared, even if they are declared later in the function.</li>
+        <li>
+            The let keyword was introduced in ES6. Variables declared with let have block scope. This means that they
+            can only be accessed from within the block of code where they are declared.
+        </li>
+        <li>
+            The const keyword was also introduced in ES6. Variables declared with const are constants. They cannot be
+            changed after they are declared. const variables also have block scope.
+        </li>
+    </section>
+    <section class="w-11/12 mx-auto mt-8">
+        <h2 class="text-3xl font-semibold  my-3">Tell us the use cases of null and undefined</h2>
+        <li>To represent the absence of a value. For example, if you are trying to access the value of a variable that
+            has not been assigned a value, the value will be undefined.</li>
+        <li>To represent an empty object. The value null can be assigned to a variable to indicate that the variable
+            does not contain an object.</li>
+        <li>To check for the absence of a value. You can use the === operator to check if a variable is equal to null or
+            undefined.</li>
+        <li>To avoid errors. If you are not sure if a variable has been assigned a value, it is better to assign it the
+            value null to avoid errors.</li>
+
+
+    </section>
+    <section class="w-11/12 mx-auto mt-8">
+        <h2 class="text-3xl font-semibold  my-3">What do you mean by REST API?</h2>
+        <li>Resource identification: Every resource in a REST API must be uniquely identifiable by a URI (Uniform
+            Resource Identifier).</li>
+        <li>Resource manipulation through representations: The state of a resource can be manipulated by transferring
+            representations of that resource.</li>
+        <li>Self-descriptiveness: The meaning of a resource and its actions should be understandable from the URI alone.
+        </li>
+        <li>Uniform interface: All resources in a REST API should be accessed using the same set of operations.</li>
+        <li>Stateless: A REST API should be stateless, meaning that each request should be independent of any previous
+            requests.</li>
+    </section>
+</body>
+
+</html>
