@@ -1,0 +1,19 @@
+.sort-btn {
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  background: rgba(37, 37, 37, 0.2);
+}
+.blog-btn {
+  border-radius: 4px;
+  background: #ff1f3d;
+  padding: 10px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.hr {
+  margin-top: 30px;
+}
