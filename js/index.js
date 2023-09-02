@@ -28,10 +28,21 @@ const handleLoadData = async (id) => {
   console.log(mainData);
 
   const cardContainer = document.getElementById("card-container");
-  cardContainer.innerHTML="";
+  cardContainer.innerHTML = "";
   // for each
+  if (mainData.length == 0) {
+    const div = document.createElement("div");
+    div.classList.add("special-class");
+    div.innerHTML = `
+     
+        <img width="300px" src="./images/icon.png" alt="">
+        <h2 class="text-3xl font-bold">Oops!! Sorry, There is no <br> content here</h2>
+      
+    `;
+    cardContainer.appendChild(div);
+  }
   mainData.forEach((all) => {
-    console.log(all );
+    console.log(all.others.posted_date);
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="card  bg-base-100 shadow-xl">
@@ -49,7 +60,11 @@ const handleLoadData = async (id) => {
             </h2>
             <div class="flex justify-start ">
                 <p><small> ${all.authors[0].profile_name} </small></p>
-                <p class="mar"> ${all.authors[0].verified ?  "Verified" :" not Verified"}  </p>
+                <p class="mar">  ${
+                  all.authors[0].verified
+                    ? '<i class="fa-solid fa-check"></i>'
+                    : ""
+                }</p>
             </div>
             <p>${all.others.views} views</p>
         </div>

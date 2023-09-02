@@ -22,6 +22,12 @@
   width: 40px;
   height: 40px;
 }
-.mar{
-    margin-left: -20px;
+.mar {
+  margin-left: -20px;
+}
+.special-class {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
