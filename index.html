@@ -10,16 +10,17 @@
     <!-- daisy ui -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@3.6.4/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
-      <!-- font awesome files -->
-      <script src="https://kit.fontawesome.com/ba7f993e34.js" crossorigin="anonymous"></script>
+    <!-- font awesome files -->
+    <script src="https://kit.fontawesome.com/ba7f993e34.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <header>
         <section class=" w-11/12  mx-auto mt-10">
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0 lg:gap-0  items-center justify-items-center">
+            <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-0 lg:gap-0  items-center justify-items-center">
                 <div><img src="./images/Logo.png" alt=""></div>
-                <div><button class="sort-btn">Sort by view</button></div>
+                <div><button id="sort-Button" class="sort-btn">Sort by view</button></div>
                 <div><button onclick="newPage()" class="blog-btn text-white">Blog</button></div>
             </div>
             <hr class="hr">
@@ -27,7 +28,8 @@
     </header>
     <main>
         <section class=" w-5/12  mx-auto mt-10">
-            <div id="category-container" class="grid grid-cols-1 gap-3 md:gap-0 lg:gap-0 lg:grid-cols-4 justify-items-center ">
+            <div id="category-container"
+                class="grid grid-cols-1 gap-3 md:gap-0 lg:gap-0 lg:grid-cols-4 justify-items-center ">
 
             </div>
 
@@ -36,33 +38,13 @@
         <!-- cards section -->
         <section class=" w-11/12  mx-auto mt-20">
             <!--  cards container -->
-            <div  id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  ">
-                <!-- <div class="card  bg-base-100 shadow-xl">
-                    <figure><img src="https://shorturl.at/aCU25" alt="Shoes" /></figure>
-                    <div class="card-body">
-                        <h2 class="card-title">
-                            <figcaption class="flex items-center justify-center space-x-3">
-                                <img class="rounded-full w-9 h-9"
-                                    src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/avatars/karen-nelson.png"
-                                    alt="profile picture">
-                                <div class="text-base space-y-0.5 font-bold dark:text-white text-left">
-                                    <div>Building a Winning UX Strategy Using the Kano Model</div>
-                                </div>
-                            </figcaption>
-                        </h2>
-                        <div class="flex justify-start ">
-                            <p>Awlad Hossain</p>
-                            <p class="mar">star</p>
-                        </div>
-                        <p>91k views</p>
-                    </div>
-                </div> -->
-             
+            <div id="card-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4  ">
+
             </div>
 
         </section>
     </main>
-  
+
 
     <!-- js files -->
     <script src="./js/index.js"></script>

@@ -41,21 +41,29 @@ const handleLoadData = async (id) => {
     `;
     cardContainer.appendChild(div);
   }
+
+  let array = [];
+
   mainData.forEach((all) => {
-    console.log( (all.others.posted_date) );
+    // console.log( typeof all.others.views);
+    // sorting
 
-    let int=parseInt(all.others.posted_date);
-    let intMin= Math.floor(int/60) ;
-    let intHour= Math.floor(intMin/60);
+    let viewsString = all.others.views;
+    let viewNumber = parseInt(viewsString);
+    array.push(viewNumber);
+    console.log(array, viewNumber);
 
-
-
+    let int = parseInt(all.others.posted_date);
+    let intMin = Math.floor(int / 60);
+    let intHour = Math.floor(intMin / 60);
 
     const div = document.createElement("div");
     div.innerHTML = `
         <div class="card  bg-base-100 shadow-xl">
-        <figure><img class="image-container" src="${all.thumbnail}" alt=""  /></figure>
-        <p  class="overlay-text" >${intHour} hrs ${intMin}min ago</p>
+        <figure><img class="image-container" src="${
+          all.thumbnail
+        }" alt=""  /></figure>
+        <p class="overlay-text" >${intHour} hrs ${intMin} min ago</p>
         <div class="card-body">
             <h2 class="card-title">
                 <figcaption class="flex items-center justify-center space-x-3">
@@ -77,17 +85,17 @@ const handleLoadData = async (id) => {
             </div>
             <p>${all.others.views} views</p>
         </div>
-        <p>Time:${intHour} hrs ${intMin}min ago</p>
+         
     </div>
         `;
     cardContainer.appendChild(div);
   });
 };
 
-const newPage=()=>{
- 
-window.location.href = "blank.html";
+//
 
-}
+const newPage = () => {
+  window.location.href = "blank.html";
+};
 loadData();
 handleLoadData(1000);
